@@ -1,7 +1,6 @@
 angular
   .module('picturemeApp', ['satellizer', 'ui.router', 'ngFileUpload'])
-  .constant('API_URL', 'http://picture-me.herokuapp.com/')
-  .constant('S3_URL', 'https://s3-eu-west-1.amazonaws.com/picture-me/')
+  .constant('API_URL', 'http://localhost:3000')
   .config(oauthConfig)
   .config(MainRouter);
 
@@ -29,19 +28,13 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "add_photos.html",
       controller: "GridController"
     })
-    .state('submit_photos', {
-      url: "/submit_photos", 
-      templateUrl: "submit_photos.html"
-    })
+    
     .state('picture_me', {
       url: "/picture_me",
       templateUrl: "picture_me.html",
       controller: "GridController"
     })
-    .state('share', {
-      url: "/share", 
-      templateUrl: "share.html"
-    })
+    
     .state('about', {
       url: "/about", 
       templateUrl: "about.html"

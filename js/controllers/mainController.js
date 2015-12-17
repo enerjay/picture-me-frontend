@@ -2,24 +2,55 @@ angular
   .module('picturemeApp')
   .controller('MainController', MainController);
 
-MainController.$inject = ['$auth', 'Upload', 'API_URL', 'S3_URL', '$rootScope', '$timeout'];
-function MainController($auth, Upload, API_URL, S3_URL, $rootScope, $timeout) {
+MainController.$inject = ['$auth', 'Upload', 'API_URL', '$rootScope', '$timeout', '$http'];
+function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
 
   var self = this;
 
   self.files = [];
   self.images = [];
 
+  function getUser() {
+    $http
+      .get(API_URL + '/user')
+      .then(function(res) {
+        self.images = res.data.user.images;
+      });
+  }
+
+// //experiment
+//   this.loggedIn = false;
+//       this.isLoggedIn = function() {
+
+//         $http.get('/checklogin')
+//           .success(function(data) {
+//             console.log(data);
+//             if (data === true)
+//               this.loggedIn = true;
+//             else
+//               this.loggedIn = false;
+//           })
+//           .error(function(data) {
+//             console.log('error: ' + data);
+//           });
+//       };
+// // end of experiment
+
   $rootScope.$on('$stateChangeSuccess', function() {
+    getUser();
     $timeout(function() {
-      if(!$('.grid').hasClass('initialized')) {
-        initializeMasonryGrid();
-        $('.grid').addClass('initialized');
-      }
-    });
+      initializeMasonryGrid();
+    },250);
   });
+
   this.authenticate = function(provider) {
     $auth.authenticate(provider);
+  }
+
+  this.logout = function() {
+    $auth.logout();
+    self.files = [];
+    self.images = [];
   }
 
   this.file = null;
@@ -47,7 +78,7 @@ function MainController($auth, Upload, API_URL, S3_URL, $rootScope, $timeout) {
       if(question.file) { self.files.push(question.file); }
     });
 
-    if(self.files.length === this.questions.length) {
+    // if(self.files.length === this.questions.length) {
       Upload.upload({
         url: API_URL + '/upload/multi',
         arrayKey: '', // IMPORTANT: without this multer will not accept the files
@@ -55,21 +86,15 @@ function MainController($auth, Upload, API_URL, S3_URL, $rootScope, $timeout) {
       })
       .then(function(res) {
         console.log("Success!");
-
-        // res.data.filenames
-        self.images = res.data.filenames.map(function(filename) {
-          
-          return S3_URL + filename;
-        });
-        console.log(self.images);
+        self.images = res.data.filenames;
       })
       .catch(function(err) {
         console.error(err);
       });
-    }
-    else {
-      self.errorMessage = "Please add an image for each question.";
-    }
+    // }
+    // else {
+    //   self.errorMessage = "Please add an image for each question.";
+    // }
   }
   this.questions = [
     { text: "1. A picture of yourself as a child", file: null },
