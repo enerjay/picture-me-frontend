@@ -9,16 +9,20 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
 
   self.files = [];
   self.images = [];
+  self.faceFile = null;
+  self.facePicture = null;
 
   function getUser() {
     $http
       .get(API_URL + '/user')
       .then(function(res) {
+        console.log(res);
         self.images = res.data.user.images;
+        self.facePicture = res.data.user.picture;
       });
   }
 
-// //experiment
+// //trying to figure out login and logout hiding nav links
 //   this.loggedIn = false;
 //       this.isLoggedIn = function() {
 
@@ -40,6 +44,8 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
     getUser();
     $timeout(function() {
       initializeMasonryGrid();
+      console.log(self.facePicture);
+      $('.grid').css('background-image', "url("+self.facePicture+")");
     },250);
   });
 
@@ -54,6 +60,22 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
   }
 
   this.file = null;
+
+  this.uploadFace = function() {
+    Upload.upload({
+       url: API_URL + '/upload/face',
+       data: { file: self.faceFile }
+     })
+     .then(function(res) {
+      self.facePicture = res.data.picture;
+       console.log("Success!");
+       console.log(res);
+     })
+     .catch(function(err) {
+       console.log("Error!");
+       console.log(err);
+     });
+  }
   this.uploadSingle = function() {
     
     Upload.upload({

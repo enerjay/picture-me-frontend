@@ -3,16 +3,29 @@
   <!-- hide this stuff if there are images in the images array -->
   
   <h1>Please upload the following</h1>
-  <p ng-if="main.errorMessage" class="popup">{{main.errorMessage}}</p>
+    <p ng-if="main.errorMessage" class="popup">{{main.errorMessage}}</p>
+
+  <form ng-submit="main.uploadFace()">
+    <div class="row">
+      <div class="ten columns question"><p>Please upload an image of your face</p>
+        </div>
+          <label class="two columns choose">
+          <input type="file" ngf-select ng-model="main.faceFile" value="Select File">Choose</label>
+          </div>
+        <label class="btn_small">
+      <input type="submit"></label>
+  </form>
+
   <form ng-submit="main.uploadMulti()">
     <div class="row">
-      <div ng-repeat="question in main.questions" ng-if="!question.file">
+
+    <div ng-repeat="question in main.questions" ng-if="!question.file">
       <div class="ten columns question"><p>{{question.text}}</p>
+        </div>
+          <label class="two columns choose">
+          <input type="file" ngf-select ng-model="question.file" value="Select File">Choose</label>
+        </div>
       </div>
-        <label class="two columns choose">
-        <input type="file" ngf-select ng-model="question.file" value="Select File">Choose</label>
-      </div>
-    </div>
     <label class="btn_image">
       <input type="submit" >
     </label>
@@ -20,7 +33,6 @@
 </main>
 
   <!-- show this stuff if there are images in the images array -->
-
   <main >
     <div class="grid" ng-show="(main.images.length > 0)">
       <!-- this will show each image in the images array using ng-repeat -->
@@ -28,9 +40,7 @@
         <img ng-src="{{image}}" class="img_grid img-big opacity size zoom image img-zoom">
       </div>
     </div>
-
-   
-      <div class="next">Share</div>
+  <!-- <div class="next">Share</div> -->
     
   </main>
 
