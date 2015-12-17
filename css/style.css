@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: whitesmoke;
   /*background-image: url('/images/bck-repeat4.png');*/
  /* background-repeat: repeat-y;*/
   
@@ -48,7 +48,7 @@ h1 {
 #nav a {
  text-decoration: none;
  font-size: 15px;
- padding: 0 10px 0 0;
+ padding: 0 20px 0 0;
  color: black;
 }
  
@@ -155,6 +155,7 @@ body { font-family: sans-serif; }
 
 /*------- questions styling------*/
 
+
 .question {
   height: 30px;
   margin-top: 15px;
@@ -183,10 +184,9 @@ body { font-family: sans-serif; }
 .facebook {
   height: 30px;
   max-width: 150px;
-  margin-top: 15px;
+  margin-top: 35px;
   padding: 10px;
   margin: 0 auto;
-  float: right;
   text-align: center;
   font-style: normal;
   font-size: 10px;
@@ -208,13 +208,16 @@ input[type="file"] {
   background-image: url('/images/submit-big.png');
   background-size: cover;
   margin-top: 20px;
-
 }
 
 .home_img {
   margin: 0 auto;
-  max-height: 100%;
-  width: 500px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-image: url('/images/circle.png');
+  background-size: cover;
+  height: 300px;
+  max-width: 300px;
 }
 
 input[type="submit"] {
