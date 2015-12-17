@@ -1,6 +1,6 @@
 angular
   .module('picturemeApp', ['satellizer', 'ui.router', 'ngFileUpload'])
-  .constant('API_URL', 'http://localhost:3000')
+  .constant('API_URL', 'http://picture-me.herokuapp.com/')
   .constant('S3_URL', 'https://s3-eu-west-1.amazonaws.com/picture-me/')
   .config(oauthConfig)
   .config(MainRouter);
