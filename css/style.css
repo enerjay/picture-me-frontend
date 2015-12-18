@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: grey;
   /*background-image: url('/images/bck-repeat4.png');*/
  /* background-repeat: repeat-y;*/
   
@@ -22,19 +22,8 @@ h1 {
    width: 100%;
    padding: 30px 30px 15px 30px;
    border-radius: 10px;
-
-   /*outline-offset: 10px;
-   outline-radius: 20px;
-   outline: 1px solid white;*/
-   background-color: white;
+   background-color: dimgrey;
 }
-
-/*.wide {
-  width: 80%;
-  border: 2px solid white;
-  border-radius: 30px;
-  background-color: black;
-}*/
 
 #nav {
  margin: 0 0 0 0;
@@ -53,7 +42,7 @@ h1 {
 }
  
 #nav a:hover {
- color: red;
+ color: white;
 }
 
 .nav-right {
@@ -101,12 +90,13 @@ body { font-family: sans-serif; }
 /* ---- masonry grid ---- */
 
 .img-big:hover {
-  -webkit-transform: scale(3.0);
-  -moz-transform: scale(3.0);
-  -ms-transform: scale(3.0);
-  -o-transform: scale(3.0);
-  transform: scale(3.0);
   opacity: 1;
+  -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  -o-transform: scale(2.5);
+  transform: scale(2.5);
+  
 }
 
 
@@ -115,7 +105,7 @@ body { font-family: sans-serif; }
   max-height: 500px;
   background-color: transparent;
   margin: 0 auto;
-  /*background-image: url();*/
+  background-image: url('/images/nkuli.jpg');
   position: absolute;
   background-repeat:no-repeat;
   background-size:contain;
@@ -142,7 +132,7 @@ body { font-family: sans-serif; }
   
 }
 
-.grid-item:hover { 
+.grid-item:active { 
   overflow: visible;
   border: 0px solid ghostwhite;
   max-height: 300px;

@@ -45,7 +45,7 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
     $timeout(function() {
       initializeMasonryGrid();
       console.log(self.facePicture);
-      $('.grid').css('background-image', "url("+self.facePicture+")");
+      // $('.grid').css('background-image', "url("+self.facePicture+")");
     },250);
   });
 
@@ -57,6 +57,7 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
     $auth.logout();
     self.files = [];
     self.images = [];
+    
   }
 
   this.file = null;
