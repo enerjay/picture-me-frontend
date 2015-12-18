@@ -96,6 +96,9 @@ body { font-family: sans-serif; }
   -ms-transform: scale(2.5);
   -o-transform: scale(2.5);
   transform: scale(2.5);
+  transition: opacity 5s linear;
+  transition: 5s ease-in;
+  transition: 5s ease-out;
   
 }
 
@@ -137,9 +140,7 @@ body { font-family: sans-serif; }
   border: 0px solid ghostwhite;
   max-height: 300px;
   width: 100%;
-  /*transition: opacity 5s linear;
-  transition: 3s ease-in;
-  transition: 3s ease-out;*/
+  
   opacity: 1;  
 }
 
@@ -279,12 +280,12 @@ input[type="submit"] {
     -ms-transition: all 5s ease-out-in;
 }
  
-.transition {
+/*.transition {
   overflow: visible;
     -webkit-transform: scale(2); 
     -moz-transform: scale(2);
     -o-transform: scale(2);
     transform: scale(2);
-}
+}*/
 
 
