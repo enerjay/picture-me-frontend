@@ -1,15 +1,15 @@
 body {
   background-color: grey;
-  /*background-image: url('/images/bck-repeat4.png');*/
- /* background-repeat: repeat-y;*/
-  
-  /*background-image:       
-  linear-gradient(0deg, transparent 50%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, 
+  background-image: url('/images/bck-repeat4.png');
+/*  padding: 50px;*/
+
+/*  background-repeat: repeat-y;*/
+ /* linear-gradient(0deg, transparent 50%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, 
     transparent 50%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, 
     transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, 
-    transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);*/
     height:100%;
-    background-size:50px 50px;*/
+    background-size: 5px 5px;
 }
 
 h1 {
@@ -22,6 +22,7 @@ h1 {
    width: 100%;
    padding: 30px 30px 15px 30px;
    border-radius: 10px;
+   border: 1px solid white;
    background-color: dimgrey;
 }
 
@@ -160,9 +161,9 @@ body { font-family: sans-serif; }
   margin-top: 15px;
   padding: 20px;
   font-size: 12px;
-  border-bottom: 1px solid red;
-  background-color: white;
-  color: grey;
+  border-bottom: 1px solid darkred;
+  background-color: dimgrey;
+  color: white;
 }
 
 .choose {
