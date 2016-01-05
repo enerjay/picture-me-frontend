@@ -40,12 +40,10 @@
         <img ng-src="{{image}}" class="img_grid img-big opacity size zoom image img-zoom">
       </div>
     </div>
-    
-    <!-- <label class="two columns choose">
-    <input type="submit" ng-model="main.deleteUserImages()" value="Delete file">Reset</label> -->
-   
     <label class="reset" ng-show="(main.images.length > 0)">
-      <input type="submit" ng-click="main.deleteUserImages()">Reset</label>
+        <input type="submit" ng-click="main.deleteUserImages()">Reset Images</label>
+      <label class="delete" ng-show="(main.images.length > 0)">
+        <input type="submit" ng-click="main.deleteUserAccount()">Delete Account</label>
   <!-- <div class="next">Share</div> -->
     
   </main>

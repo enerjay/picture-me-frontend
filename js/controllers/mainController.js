@@ -22,30 +22,13 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
       });
   }
 
-// //trying to figure out login and logout hiding nav links
-//   this.loggedIn = false;
-//       this.isLoggedIn = function() {
-
-//         $http.get('/checklogin')
-//           .success(function(data) {
-//             console.log(data);
-//             if (data === true)
-//               this.loggedIn = true;
-//             else
-//               this.loggedIn = false;
-//           })
-//           .error(function(data) {
-//             console.log('error: ' + data);
-//           });
-//       };
-// // end of experiment
 
   $rootScope.$on('$stateChangeSuccess', function() {
     getUser();
     $timeout(function() {
       initializeMasonryGrid();
       console.log(self.facePicture);
-      // $('.grid').css('background-image', "url("+self.facePicture+")");
+      $('.grid').css('background-image', "url("+self.facePicture+")");
     },250);
   });
 
@@ -73,7 +56,7 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
 
   this.deleteUserImages = function() {
     $http
-    .delete(API_URL + '/user')
+    .delete(API_URL + '/user/pictures')
     .then(function(res) {
       self.logout();
     })
