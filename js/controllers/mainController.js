@@ -60,6 +60,28 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
     
   }
 
+  this.deleteUserAccount = function() {
+    $http
+      .delete(API_URL + '/user')
+      .then(function(res) {
+        self.logout();
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
+  }
+
+  this.deleteUserImages = function() {
+    $http
+    .delete(API_URL + '/user')
+    .then(function(res) {
+      self.logout();
+    })
+    .catch(function(err) {
+      console.error(err);
+    });
+  }
+
   this.file = null;
 
   this.uploadFace = function() {
