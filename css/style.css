@@ -19,6 +19,19 @@ h1 {
    background-color: white;
 }
 
+/*@media (min-width: 300px) {
+  .container {
+    min-width: 400px;
+  }
+  .grid-item {
+      height: 50px;
+      max-width: 50px;
+      overflow: hidden;
+      
+
+  }
+}*/
+
 #nav {
  margin: 0 0 0 0;
 }
@@ -58,9 +71,7 @@ h1 {
 
 .img_grid {
   max-height: 200px;
-  max-width: 200px;
-
-  
+  max-width: 200px; 
 }
 .opacity {
   opacity: 0.2;
@@ -96,14 +107,12 @@ body { font-family: sans-serif; }
   transition: 5s ease-out;
   
 }
-
-
 .grid {
   max-width: 500px;
   max-height: 500px;
   background-color: transparent;
   margin: 0 auto;
-  background-image: url('/images/nkuli.jpg');
+  background-image: url();
   position: absolute;
   background-repeat:no-repeat;
   background-size:contain;
@@ -123,21 +132,17 @@ body { font-family: sans-serif; }
   height: 100px;
   max-width: 100px;
   overflow: hidden;
-  /*transition: visibility 4s 4s, opacity 4s linear;*/
-/*  border: 1px solid ghostwhite;*/
+  transition: visibility 4s 4s, opacity 4s linear;
+  /*border: 1px solid ghostwhite;*/
   size:contain;
   background-position:center;
   
 }
-
-
-
 .grid-item:active { 
   overflow: visible;
   border: 0px solid ghostwhite;
   max-height: 300px;
   width: 100%;
-  
   opacity: 1;  
 }
 
@@ -179,7 +184,7 @@ body { font-family: sans-serif; }
 
 .facebook {
   height: 30px;
-  max-width: 150px;
+  max-width: 200px;
   margin-top: 35px;
   padding: 10px;
   margin: 0 auto;
@@ -199,7 +204,7 @@ input[type="file"] {
 .reset {
   margin-top: 20px;
   height: 30px;
-  max-width: 100px;
+  max-width: 150px;
   margin-top: 50px;
   padding: 10px;
   float: right;
@@ -215,7 +220,7 @@ input[type="file"] {
 .delete {
   margin-top: 20px;
   height: 30px;
-  max-width: 100px;
+  max-width: 150px;
   margin-top: 50px;
   padding: 10px;
   float: left;

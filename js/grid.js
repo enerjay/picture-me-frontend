@@ -4,7 +4,7 @@ function initializeMasonryGrid() {
     itemSelector: '.grid-item',
     columnWidth: 100
   });
-  $('.img-zoom').click(function() {
+  $('.img-zoom').focus(function() {
     $(this).addClass('transition');
   });  
 };
