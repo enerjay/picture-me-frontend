@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  /*background-image: url('/images/bck-repeat4.png');*/
+  /*background-image: url('./images/bck-repeat4.png');*/
   height:100%;
   background-size: 5px 5px;
 }
@@ -124,7 +124,7 @@ body { font-family: sans-serif; }
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  background-image: url('/images/submit-big.png');
+  background-image: url('./images/submit-big.png');
   background-size: cover;
   margin-top: 20px;
 }
@@ -238,7 +238,7 @@ input[type="file"] {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  background-image: url('/images/submit-big.png');
+  background-image: url('./images/submit-big.png');
   background-size: cover;
   margin-top: 20px;
 }
@@ -247,7 +247,7 @@ input[type="file"] {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
-  background-image: url('/images/circle.png');
+  background-image: url('./images/circle.png');
   background-size: cover;
   height: 300px;
   max-width: 300px;
