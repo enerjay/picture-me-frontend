@@ -1,6 +1,11 @@
 angular
   .module('picturemeApp', ['satellizer', 'ui.router', 'ngFileUpload'])
-  .constant('API_URL', 'http://localhost:3000')
+  .constant('API_URL', (function(){
+    if(/localhost/.test(document.domain))
+      return 'http://localhost:3000'
+    else
+      return 'http://picture-me-api.herokuapp.com'
+  })())
   .config(oauthConfig)
   .config(MainRouter);
 
