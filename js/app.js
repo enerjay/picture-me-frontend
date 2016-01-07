@@ -17,9 +17,8 @@ function oauthConfig(API_URL, $authProvider) {
   $authProvider.facebook({
     url: API_URL + '/auth/facebook',
     clientId: '1535623983421042',
-    // redirectUri: window.location.href,
-    confirmationSuccessUrl:  window.location.href,
-  });
+    redirectUri: window.location.href = url;
+    });
 }
 
 function MainRouter($stateProvider, $urlRouterProvider) {
