@@ -24,7 +24,8 @@ function MainController($auth, Upload, API_URL, $rootScope, $timeout, $http) {
 
 
   $rootScope.$on('$stateChangeSuccess', function() {
-    getUser();
+    //before requesting the server for user data, we need to make sure there is a token
+    if(window.localStorage.getItem("satellizer_token")) getUser();
     $timeout(function() {
       initializeMasonryGrid();
       console.log(self.facePicture);
