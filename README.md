@@ -1,5 +1,7 @@
 #Picture Me
 
+![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/picture-me-logo.png)
+
 http://enerjay.github.io/picture-me-frontend/
 
 
@@ -7,7 +9,6 @@ http://enerjay.github.io/picture-me-frontend/
 
 I am unique person built up of many layers - images, We live our lives with snap shots of of our life past and present - emotion, love and pain. 
 All the images will make a complete portrait of the user - you will only see the image when you hover a section of the face. This is the same as an interaction in life with someone you don't know, you don;t necessarily see the joy and pain. It's only by chatting that you shed light on an experiemce which in turn reveals an image. We are made up of many pictures. The final piece with contain all the visuals that make us unique.
-
 
 
 ####User Stories
@@ -23,8 +24,9 @@ All the images will make a complete portrait of the user - you will only see the
 
 
 
-#####Aims for the future
-- ability to share the finished image
+####Aims for the future
+- A user would be able to select the 25 images from their facebook account
+- A user will have the ability to share the finished image
 
 
 
@@ -36,7 +38,7 @@ All the images will make a complete portrait of the user - you will only see the
 - Angular
 - Node
 - Facebook auth using satellizer
-- ngFileUpload
+- NgFileUpload
 - AWS
 - HTML5
 - CSS3
@@ -44,7 +46,13 @@ All the images will make a complete portrait of the user - you will only see the
 - JQuery
 - JQuery Masonry
 
-#####Final Product
+####Wireframes
+![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/wireframe.png)
+
+
+####Final Product
+
+![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/screen.png)
 
 
 
