@@ -1,6 +1,6 @@
 #Picture Me
 
-![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/picture-me-logo.png)
+![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/picture-me-logo-small.png)
 
 http://enerjay.github.io/picture-me-frontend/
 
