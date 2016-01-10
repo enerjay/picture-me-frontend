@@ -47,7 +47,10 @@ All the images will make a complete portrait of the user - you will only see the
 - JQuery Masonry
 
 ####Wireframes
+
 ![image](https://github.com/enerjay/picture-me-frontend/blob/master/images/wireframe.png)
+
+[Wireframes pdf](https://github.com/enerjay/picture-me-frontend/blob/master/wireframes-final.pdf)
 
 
 ####Final Product
